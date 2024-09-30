@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:expense_app/expense_list.dart';
 import 'package:expense_app/model/expense_structure.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,7 @@ class _ExpenseScreen extends State<ExpenseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [ListView(children: [_registeredexpense],)],),
+      body: Column(children: [ListView(children: [ExpenseList(expenses: _registeredexpense,)],)],),
     );
   }
 }
