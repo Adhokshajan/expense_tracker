@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:expense_app/model/expense_structure.dart';
 import 'package:flutter/material.dart';
 
 class ExpenseScreen extends StatefulWidget {
@@ -10,10 +11,21 @@ class ExpenseScreen extends StatefulWidget {
 }
 
 class _ExpenseScreen extends State<ExpenseScreen> {
+  final List<Expense> _registeredexpense=[
+    Expense(title: "Movie", amount: 500.00, date: DateTime.now(), category: Category.leisure)
+  ];
+
+
+
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [Text("hi there")],),
+      body: Column(children: [ListView(children: [_registeredexpense],)],),
     );
   }
 }
